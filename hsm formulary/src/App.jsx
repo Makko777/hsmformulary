@@ -1580,6 +1580,9 @@ export default function FormularyApp() {
                     <p className="text-slate-500 dark:text-slate-400 text-sm mb-2">
                         © 2025 Hospital Seri Manjung. All Rights Reserved.
                     </p>
+                    <p className="text-xs text-slate-400 dark:text-slate-500 mb-3">
+                        For additions or to report issues, please contact <span className="font-semibold text-slate-600 dark:text-slate-300">Siti Nor Syahidah</span>
+                    </p>
                     <p className="text-xs text-slate-400 dark:text-slate-500 uppercase tracking-widest font-semibold">
                         Authorized Personnel Only • Internal Use
                     </p>
