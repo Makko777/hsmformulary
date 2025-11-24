@@ -44,8 +44,8 @@ import {
     Users
 } from 'lucide-react';
 
-// --- INITIAL DATA ---
-const INITIAL_FORMULARY = [];
+// --- FORMULARY DATA ---
+import FORMULARY_DATA from './formularyData.json';
 
 // --- DILUTION DATA ---
 import { DILUTION_DATA, DILUTION_METADATA } from './dilutionData.js';
@@ -56,6 +56,7 @@ import { PAEDIATRIC_MEDICATIONS, PAEDIATRIC_MEDICATION_METADATA } from './paedia
 
 // --- COUNSELING DATA ---
 import { COUNSELING_MEDICATIONS, COUNSELING_METADATA } from './counselingData.js';
+import FRANK_SHANN_DATA from './frankShannData.json';
 
 // --- NAG DATA STRUCTURE & URLs ---
 const NAG_BASE = "https://sites.google.com/moh.gov.my/nag/contents";
@@ -504,7 +505,7 @@ const DilutionView = () => {
 };
 
 // --- PAEDIATRIC VIEW COMPONENT ---
-const PaediatricView = () => {
+const PaediatricProtocolView = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedMedication, setSelectedMedication] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState("All");
@@ -822,6 +823,146 @@ const PaediatricView = () => {
     );
 };
 
+// --- FRANK SHANN VIEW COMPONENT ---
+const FrankShannView = () => {
+    const [searchTerm, setSearchTerm] = useState("");
+    const [selectedDrug, setSelectedDrug] = useState(null);
+
+    const filteredDrugs = useMemo(() => {
+        if (!searchTerm) return FRANK_SHANN_DATA;
+        const lower = searchTerm.toLowerCase();
+        return FRANK_SHANN_DATA.filter(d =>
+            d.name.toLowerCase().includes(lower) ||
+            d.dosage.toLowerCase().includes(lower)
+        );
+    }, [searchTerm]);
+
+    return (
+        <div className="space-y-6 md:space-y-8">
+            <div className="bg-gradient-to-r from-pink-600 to-rose-600 dark:from-pink-700 dark:to-rose-700 rounded-2xl p-6 md:p-8 text-white shadow-xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-rose-500/10 rounded-full -ml-10 -mb-10 blur-2xl"></div>
+
+                <div className="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                    <div>
+                        <h2 className="text-2xl md:text-3xl font-bold mb-3 flex items-center gap-3">
+                            <Stethoscope size={32} className="text-pink-200" />
+                            <span>Frank Shann Drug Doses</span>
+                        </h2>
+                        <p className="text-pink-50 text-sm md:text-base max-w-2xl leading-relaxed mb-2">
+                            17th Edition (2017) - Paediatric Drug Doses
+                        </p>
+                        <p className="text-pink-100 text-xs">
+                            <strong>Source:</strong> Frank Shann 17th Ed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 dark:text-slate-500" size={20} />
+                <input
+                    type="text"
+                    placeholder="Search Frank Shann formulary..."
+                    className="w-full pl-12 pr-4 py-3.5 bg-slate-100 dark:bg-slate-800 border-transparent focus:bg-white dark:focus:bg-slate-700 focus:border-pink-500 dark:focus:border-pink-400 focus:ring-4 focus:ring-pink-500/10 dark:focus:ring-pink-900/50 rounded-2xl text-slate-800 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500 transition-all outline-none text-base font-medium shadow-sm"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                />
+            </div>
+
+            <div className="flex items-center justify-between px-2">
+                <span className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">
+                    Showing {filteredDrugs.length} entries
+                </span>
+            </div>
+
+            {filteredDrugs.length === 0 ? (
+                <div className="text-center py-12">
+                    <div className="bg-slate-100 dark:bg-slate-800 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <Search className="text-slate-400 dark:text-slate-500" size={32} />
+                    </div>
+                    <p className="text-slate-400 dark:text-slate-500">No results found</p>
+                </div>
+            ) : (
+                <div className="grid gap-4 sm:grid-cols-1">
+                    {filteredDrugs.slice(0, 100).map(drug => (
+                        <div
+                            key={drug.id}
+                            onClick={() => setSelectedDrug(drug)}
+                            className="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-md hover:border-pink-300 dark:hover:border-pink-700 transition-all cursor-pointer group"
+                        >
+                            <div className="flex items-center justify-between">
+                                <h3 className="font-bold text-slate-800 dark:text-slate-100 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors">{drug.name}</h3>
+                                <ChevronRight size={16} className="text-slate-300 dark:text-slate-600 group-hover:text-pink-500 dark:group-hover:text-pink-400 transition-colors" />
+                            </div>
+                            <p className="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mt-1 font-mono bg-slate-50 dark:bg-slate-900/50 p-2 rounded-lg">{drug.dosage}</p>
+                        </div>
+                    ))}
+                    {filteredDrugs.length > 100 && (
+                        <div className="text-center py-4 text-slate-400 dark:text-slate-500 text-sm italic">
+                            Showing first 100 results. Refine search to see more.
+                        </div>
+                    )}
+                </div>
+            )}
+
+            <Modal isOpen={!!selectedDrug} onClose={() => setSelectedDrug(null)}>
+                {selectedDrug && (
+                    <div className="bg-white dark:bg-slate-800 w-full">
+                        <div className="px-5 md:px-6 py-4 border-b border-slate-100 dark:border-slate-700 bg-pink-50 dark:bg-pink-900/20">
+                            <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100">{selectedDrug.name}</h2>
+                            <p className="text-xs text-pink-600 dark:text-pink-400 font-mono mt-1">{selectedDrug.id}</p>
+                        </div>
+                        <div className="p-6 max-h-[70vh] overflow-y-auto">
+                            <div className="bg-slate-50 dark:bg-slate-700/50 rounded-lg p-4 border border-slate-100 dark:border-slate-600">
+                                <h3 className="text-sm font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-3 flex items-center gap-2">
+                                    <FileText size={16} /> Dosage & Information
+                                </h3>
+                                <p className="text-base text-slate-800 dark:text-slate-200 whitespace-pre-wrap leading-relaxed font-medium">
+                                    {selectedDrug.dosage}
+                                </p>
+                            </div>
+                        </div>
+                        <div className="px-5 md:px-6 py-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-700">
+                            <p className="text-xs text-slate-500 dark:text-slate-400 text-center">
+                                <strong>Source:</strong> Frank Shann 17th Edition. Always verify with clinical judgment.
+                            </p>
+                        </div>
+                    </div>
+                )}
+            </Modal>
+        </div>
+    );
+};
+
+// --- MAIN PAEDIATRIC VIEW WRAPPER ---
+const PaediatricView = () => {
+    const [activeTab, setActiveTab] = useState('protocol');
+
+    return (
+        <div className="max-w-4xl mx-auto px-4 py-6 space-y-6 md:space-y-8">
+            <div className="flex p-1 bg-slate-100 dark:bg-slate-800 rounded-xl mb-6">
+                <button
+                    onClick={() => setActiveTab('protocol')}
+                    className={`flex-1 py-2.5 text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-2 ${activeTab === 'protocol' ? 'bg-white dark:bg-slate-700 shadow-sm text-purple-600 dark:text-purple-400' : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300'}`}
+                >
+                    <Baby size={16} /> Paediatric Protocol
+                </button>
+                <button
+                    onClick={() => setActiveTab('frankshann')}
+                    className={`flex-1 py-2.5 text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-2 ${activeTab === 'frankshann' ? 'bg-white dark:bg-slate-700 shadow-sm text-pink-600 dark:text-pink-400' : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300'}`}
+                >
+                    <Stethoscope size={16} /> Frank Shann
+                </button>
+            </div>
+
+            <div className="animate-in fade-in slide-in-from-bottom-4 duration-300">
+                {activeTab === 'protocol' ? <PaediatricProtocolView /> : <FrankShannView />}
+            </div>
+        </div>
+    );
+};
+
 // --- COUNSELING VIEW COMPONENT ---
 const CounselingView = () => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -1051,23 +1192,12 @@ const CounselingView = () => {
 
 export default function FormularyApp() {
     const [searchTerm, setSearchTerm] = useState("");
-    const [selectedCategory, setSelectedCategory] = useState("All");
     const [favorites, setFavorites] = useState([]);
     const [selectedDrug, setSelectedDrug] = useState(null);
     const [view, setView] = useState('list');
     const [appMode, setAppMode] = useState('formulary');
-    const [formularyData, setFormularyData] = useState(INITIAL_FORMULARY);
     const [darkMode, setDarkMode] = useState(false);
-    const fileInputRef = useRef(null);
-
-    // --- DYNAMIC CATEGORIES ---
-    const categories = useMemo(() => {
-        const uniqueCats = new Set(formularyData.map(d => d.category));
-        const sortedCats = Array.from(uniqueCats).sort();
-        const finalCats = ["All", ...sortedCats.filter(c => c !== "Others")];
-        if (uniqueCats.has("Others")) finalCats.push("Others");
-        return finalCats;
-    }, [formularyData]);
+    const formularyData = FORMULARY_DATA;
 
     // Load dark mode preference
     useEffect(() => {
@@ -1104,31 +1234,7 @@ export default function FormularyApp() {
         }
     }, []);
 
-    // Auto-load CSV from public folder on mount
-    const hasLoadedRef = useRef(false);
-    useEffect(() => {
-        const loadDefaultCSV = async () => {
-            // Prevent duplicate loads (React Strict Mode runs effects twice)
-            if (hasLoadedRef.current) return;
-            hasLoadedRef.current = true; // Set immediately to prevent race condition
 
-            try {
-                const response = await fetch('/formulary.csv');
-                if (response.ok) {
-                    const csvText = await response.text();
-                    parseCSV(csvText);
-                    console.log('✅ Auto-loaded formulary.csv from public folder');
-                }
-            } catch (error) {
-                console.log('ℹ️ No formulary.csv found in public folder. You can manually import one.');
-            }
-        };
-
-        // Only auto-load if formularyData is empty
-        if (formularyData.length === 0) {
-            loadDefaultCSV();
-        }
-    }, []);
 
 
     useEffect(() => {
@@ -1144,135 +1250,7 @@ export default function FormularyApp() {
         }
     };
 
-    // --- CSV PARSING LOGIC ---
-    const handleFileUpload = (event) => {
-        const file = event.target.files[0];
-        if (!file) return;
 
-        const reader = new FileReader();
-        reader.onload = (e) => {
-            const text = e.target.result;
-            parseCSV(text);
-        };
-        reader.readAsText(file);
-        event.target.value = '';
-    };
-
-    const parseCSV = (csvText) => {
-        const rows = [];
-        let currentRow = [];
-        let currentCell = '';
-        let inQuotes = false;
-
-        for (let i = 0; i < csvText.length; i++) {
-            const char = csvText[i];
-            const nextChar = csvText[i + 1];
-
-            if (char === '"') {
-                if (inQuotes && nextChar === '"') {
-                    currentCell += '"';
-                    i++;
-                } else {
-                    inQuotes = !inQuotes;
-                }
-            } else if (char === ',' && !inQuotes) {
-                currentRow.push(currentCell.trim());
-                currentCell = '';
-            } else if ((char === '\r' || char === '\n') && !inQuotes) {
-                if (currentCell || currentRow.length > 0) {
-                    currentRow.push(currentCell.trim());
-                    rows.push(currentRow);
-                    currentRow = [];
-                    currentCell = '';
-                }
-                if (char === '\r' && nextChar === '\n') i++;
-            } else {
-                currentCell += char;
-            }
-        }
-        if (currentCell) currentRow.push(currentCell.trim());
-        if (currentRow.length > 0) rows.push(currentRow);
-
-        let headerIdx = -1;
-        let colMap = { atc: 0, name: 1, ind: 2, dose: 3, cat: 4, dept: 5, notes: 6, brand: 7, price: 8 };
-
-        for (let i = 0; i < Math.min(rows.length, 20); i++) {
-            const rowStr = rows[i].join(" ").toUpperCase();
-            if (rowStr.includes("ATC") && (rowStr.includes("GENERIK") || rowStr.includes("GENERIC") || rowStr.includes("NAME"))) {
-                headerIdx = i;
-                const r = rows[i].map(c => c.toUpperCase());
-                const findIdx = (keywords) => r.findIndex(cell => keywords.some(k => cell.includes(k)));
-
-                const atc = findIdx(["ATC"]);
-                const name = findIdx(["GENERIK", "GENERIC", "NAME", "UBAT"]);
-                const ind = findIdx(["INDIKASI", "INDICATION"]);
-                const dose = findIdx(["DOS", "DOSE"]);
-                const brand = findIdx(["BRAND"]);
-                const price = findIdx(["PRICE", "HARGA", "RM"]);
-                const cat = findIdx(["KATEGORI", "CAT", "PRESCRIBER"]);
-                const notes = findIdx(["CATATAN", "NOTE", "REMARK"]);
-
-                if (atc > -1) colMap.atc = atc;
-                if (name > -1) colMap.name = name;
-                if (ind > -1) colMap.ind = ind;
-                if (dose > -1) colMap.dose = dose;
-                if (brand > -1) colMap.brand = brand;
-                if (price > -1) colMap.price = price;
-                if (cat > -1) colMap.cat = cat;
-                if (notes > -1) colMap.notes = notes;
-
-                break;
-            }
-        }
-
-        const startRow = headerIdx === -1 ? 0 : headerIdx + 1;
-        let currentSection = "Others";
-        const newDrugs = [];
-
-        for (let i = startRow; i < rows.length; i++) {
-            const row = rows[i];
-            if (!row || row.length === 0) continue;
-
-            const firstCell = row[0] ? row[0].trim() : "";
-
-            if (firstCell && firstCell.match(/^\d+/)) {
-                currentSection = firstCell.replace(/[\r\n]+/g, " ").replace(/["]+/g, "").trim();
-                continue;
-            }
-
-            if (!row[colMap.name]) continue;
-
-            const rawName = row[colMap.name].trim();
-            if (!rawName) continue;
-            if (rawName.toUpperCase().includes("NAMA GENERIK")) continue;
-
-            const price = row[colMap.price] ? row[colMap.price].replace(/[\r\n]+/g, " ").trim() : "N/A";
-
-            newDrugs.push({
-                id: `csv-${Date.now()}-${i}`,
-                genericName: rawName,
-                brandName: row[colMap.brand] || "Generic",
-                category: currentSection,
-                forms: [rawName.split(" ").pop() || "Unit"],
-                indications: row[colMap.ind] || "See detailed info",
-                dosing: row[colMap.dose] || "See detailed info",
-                renalDose: "Check guidelines",
-                pregnancy: "Not specified",
-                highAlert: false,
-                notes: `${row[colMap.notes] || ""} ${row[colMap.dept] ? `(Dept: ${row[colMap.dept]})` : ""}`,
-                price: price,
-                prescriberCat: row[colMap.cat] || "N/A"
-            });
-        }
-
-        if (newDrugs.length === 0) {
-            alert("No valid medication rows found. Please check CSV format.");
-            return;
-        }
-
-        setFormularyData(prev => [...prev, ...newDrugs]);
-        alert(`Success! Imported ${newDrugs.length} medications.`);
-    };
 
     const filteredDrugs = useMemo(() => {
         let data = formularyData;
@@ -1287,19 +1265,11 @@ export default function FormularyApp() {
                 (drug.genericName && drug.genericName.toLowerCase().includes(searchLower)) ||
                 (drug.brandName && drug.brandName.toLowerCase().includes(searchLower));
 
-            const matchesCategory = selectedCategory === "All" || drug.category === selectedCategory;
-
-            return matchesSearch && matchesCategory;
+            return matchesSearch;
         });
-    }, [searchTerm, selectedCategory, favorites, view, formularyData]);
+    }, [searchTerm, favorites, view, formularyData]);
 
-    const handleClearData = () => {
-        if (window.confirm("Are you sure you want to clear all imported data and reset to default?")) {
-            setFormularyData(INITIAL_FORMULARY);
-            setFavorites([]);
-            localStorage.removeItem('formulary_favorites');
-        }
-    }
+
 
     return (
         <div className="min-h-screen bg-gray-50 dark:bg-slate-900 font-sans text-gray-900 dark:text-gray-100 transition-colors">
@@ -1397,25 +1367,6 @@ export default function FormularyApp() {
                     {appMode === 'formulary' && (
                         <>
                             <div className="flex items-center gap-2 mb-3 justify-end flex-wrap">
-                                <input
-                                    type="file"
-                                    accept=".csv"
-                                    ref={fileInputRef}
-                                    onChange={handleFileUpload}
-                                    className="hidden"
-                                />
-                                <button
-                                    onClick={() => fileInputRef.current?.click()}
-                                    className="text-xs flex items-center gap-1 px-3 py-2 bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 rounded-lg hover:bg-teal-100 dark:hover:bg-teal-900/50 font-bold transition-colors min-h-[40px]"
-                                >
-                                    <Upload size={14} /> Import CSV
-                                </button>
-                                <button
-                                    onClick={handleClearData}
-                                    className="text-xs flex items-center gap-1 px-3 py-2 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-600 font-bold transition-colors min-h-[40px]"
-                                >
-                                    <RefreshCw size={14} /> Reset
-                                </button>
                                 <button
                                     onClick={() => setView(view === 'list' ? 'favorites' : 'list')}
                                     className={`p-2 rounded-full transition-colors min-h-[40px] min-w-[40px] flex items-center justify-center ${view === 'favorites'
@@ -1435,23 +1386,6 @@ export default function FormularyApp() {
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
                                 />
-                            </div>
-
-                            <div className="flex space-x-2 overflow-x-auto pb-2 -mx-4 px-4 scrollbar-thin scrollbar-thumb-slate-300 dark:scrollbar-thumb-slate-600">
-                                {categories.length > 0 ? categories.map(cat => (
-                                    <button
-                                        key={cat}
-                                        onClick={() => setSelectedCategory(cat)}
-                                        className={`whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold transition-all min-h-[36px] ${selectedCategory === cat
-                                            ? 'bg-teal-600 dark:bg-teal-600 text-white shadow-md shadow-teal-900/20'
-                                            : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700'
-                                            }`}
-                                    >
-                                        {cat}
-                                    </button>
-                                )) : (
-                                    <div className="text-sm text-slate-400 dark:text-slate-500 px-4 py-2 italic">Categories will appear after import</div>
-                                )}
                             </div>
                         </>
                     )}
@@ -1479,24 +1413,7 @@ export default function FormularyApp() {
                             </div>
                         )}
 
-                        {formularyData.length === 0 ? (
-                            <div className="text-center py-12 md:py-20">
-                                <div className="bg-teal-50 dark:bg-teal-900/20 rounded-full w-20 h-20 md:w-24 md:h-24 flex items-center justify-center mx-auto mb-6 animate-pulse">
-                                    <Database className="text-teal-500 dark:text-teal-400" size={40} />
-                                </div>
-                                <h3 className="text-lg md:text-xl font-bold text-slate-800 dark:text-slate-200 mb-2">Database Empty</h3>
-                                <p className="text-slate-500 dark:text-slate-400 max-w-sm mx-auto mb-8 px-4">
-                                    Please import your <strong>HSM Formulary 2025</strong> CSV file to access medication data.
-                                </p>
-                                <button
-                                    onClick={() => fileInputRef.current?.click()}
-                                    className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 dark:bg-teal-600 text-white rounded-xl hover:bg-teal-700 dark:hover:bg-teal-500 font-bold transition-all shadow-lg shadow-teal-900/20 min-h-[44px]"
-                                >
-                                    <Upload size={20} />
-                                    <span>Import CSV File</span>
-                                </button>
-                            </div>
-                        ) : filteredDrugs.length === 0 ? (
+                        {filteredDrugs.length === 0 ? (
                             <div className="text-center py-12 md:py-20">
                                 <div className="bg-slate-100 dark:bg-slate-800 rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-4">
                                     <Search className="text-slate-400 dark:text-slate-500" size={32} />
