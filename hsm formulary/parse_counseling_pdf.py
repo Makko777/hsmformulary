@@ -225,11 +225,41 @@ def parse_counseling_text(file_path):
     extracted_data = []
     
     for i, match in enumerate(matches):
-        before_name = match.group(1)
-        name = extract_drug_name(before_name)
+        name_candidate = match.group(1)
+        name = extract_drug_name(name_candidate) # Use the existing extract_drug_name for robust cleaning
         
+        # Skip non-drug entries
         if not name:
-            name = f"Medication_{i+1}"
+            continue
+        
+        # Filter out common non-drug text patterns
+        skip_patterns = [
+            r'^Name\s*:?\s*$',  # Just "Name:" with no actual name
+            r'^Signature',
+            r'^Date',
+            r'^\d{1,2}[/-]\d{1,2}[/-]\d{2,4}',  # Dates
+            r'^Reviewed\s+by',
+            r'^Prepared\s+by',
+            r'^Checked\s+by',
+            r'^Verified\s+by',
+            r'^\s*$',  # Empty
+            r'^Page\s+\d+',
+            r'^Remarks',
+            r'^References',
+        ]
+        
+        should_skip = False
+        for pattern in skip_patterns:
+            if re.match(pattern, name, re.IGNORECASE):
+                should_skip = True
+                break
+        
+        if should_skip:
+            continue
+        
+        # Also skip if name is too short (likely not a drug name)
+        if len(name) < 3:
+            continue
         
         start_pos = match.end()
         if i < len(matches) - 1:
