@@ -2599,6 +2599,6 @@ export const COUNSELING_METADATA = {
   title: "Borang Penilaian Kaunseling",
   subtitle: "Pegawai Farmasi",
   totalMedications: 153,
-  lastUpdated: "2025-11-24",
+  lastUpdated: "2025-11-26",
   source: "borang-penilaian-kemahiran-kaunseling-pegawai-farmasi.pdf"
 };

@@ -56,6 +56,7 @@ import { PAEDIATRIC_MEDICATIONS, PAEDIATRIC_MEDICATION_METADATA } from './paedia
 
 // --- COUNSELING DATA ---
 import { COUNSELING_MEDICATIONS, COUNSELING_METADATA } from './counselingData.js';
+import ABX_DATA from './abxData.json';
 import FRANK_SHANN_DATA from './frankShannData.json';
 
 // --- NAG DATA STRUCTURE & URLs ---
@@ -280,6 +281,166 @@ const NAGView = () => {
                     </p>
                 </div>
             </div>
+        </div>
+    );
+};
+// --- ABX REGIME VIEW COMPONENT ---
+const ABXRegimeView = () => {
+    const [searchTerm, setSearchTerm] = useState("");
+    const [selectedAntibiotic, setSelectedAntibiotic] = useState(null);
+    const antibiotics = ABX_DATA.antibiotics;
+
+    const filteredAntibiotics = useMemo(() => {
+        if (!searchTerm) return antibiotics;
+        const searchLower = searchTerm.toLowerCase();
+        return antibiotics.filter(abx =>
+            abx.name.toLowerCase().includes(searchLower) ||
+            abx.category.toLowerCase().includes(searchLower) ||
+            abx.route.toLowerCase().includes(searchLower)
+        );
+    }, [searchTerm, antibiotics]);
+
+    return (
+        <div className="max-w-4xl mx-auto px-4 py-6 space-y-6">
+            {/* Sticky Header */}
+            <div className="sticky top-0 z-10 bg-white dark:bg-slate-900 pb-4 space-y-4">
+                <div className="flex items-center gap-3 mb-2">
+                    <Activity size={28} className="text-emerald-600 dark:text-emerald-400" />
+                    <div>
+                        <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-100">ABX Regime HSM 2017</h2>
+                        <p className="text-sm text-slate-500 dark:text-slate-400">Antibiotic Renal Dosing Adjustments</p>
+                    </div>
+                </div>
+
+                {/* Search Bar */}
+                <div className="relative">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400" size={18} />
+                    <input
+                        type="text"
+                        placeholder="Search antibiotic name, category, or route..."
+                        className="w-full pl-10 pr-4 py-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 dark:focus:ring-emerald-600 outline-none text-slate-800 dark:text-slate-200"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                    />
+                </div>
+
+                <div className="text-xs text-slate-500 dark:text-slate-400">
+                    Showing {filteredAntibiotics.length} of {antibiotics.length} antibiotics
+                </div>
+            </div>
+
+            {/* Results */}
+            <div className="space-y-3">
+                {filteredAntibiotics.map(abx => (
+                    <div
+                        key={abx.id}
+                        onClick={() => setSelectedAntibiotic(abx)}
+                        className="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700 hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-md transition-all cursor-pointer"
+                    >
+                        <div className="flex items-start justify-between gap-3">
+                            <div className="flex-1">
+                                <div className="flex items-center gap-2 mb-1">
+                                    <h3 className="font-bold text-slate-800 dark:text-slate-100">{abx.name}</h3>
+                                    <span className="text-xs px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 font-medium">
+                                        {abx.route}
+                                    </span>
+                                </div>
+                                <p className="text-sm text-slate-600 dark:text-slate-400 mb-1">
+                                    <strong>Usual Dose:</strong> {abx.usualDose}
+                                </p>
+                                <p className="text-xs text-slate-500 dark:text-slate-500">{abx.category}</p>
+                            </div>
+                            <ChevronRight size={20} className="text-slate-400 flex-shrink-0" />
+                        </div>
+                    </div>
+                ))}
+
+                {filteredAntibiotics.length === 0 && (
+                    <div className="text-center py-12">
+                        <Search className="mx-auto text-slate-300 dark:text-slate-600 mb-3" size={48} />
+                        <p className="text-slate-500 dark:text-slate-400">No antibiotics found</p>
+                    </div>
+                )}
+            </div>
+
+            {/* Detail Modal */}
+            {selectedAntibiotic && (
+                <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4" onClick={() => setSelectedAntibiotic(null)}>
+                    <div className="bg-white dark:bg-slate-800 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+                        <div className="sticky top-0 bg-gradient-to-r from-emerald-600 to-teal-600 p-6 rounded-t-2xl">
+                            <div className="flex items-start justify-between">
+                                <div className="flex-1">
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <h3 className="text-xl font-bold text-white">{selectedAntibiotic.name}</h3>
+                                        <span className="px-2 py-1 rounded-lg bg-white/20 text-white text-xs font-bold">
+                                            {selectedAntibiotic.route}
+                                        </span>
+                                    </div>
+                                    <p className="text-emerald-100 text-sm">{selectedAntibiotic.category}</p>
+                                </div>
+                                <button
+                                    onClick={() => setSelectedAntibiotic(null)}
+                                    className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+                                >
+                                    <X size={20} className="text-white" />
+                                </button>
+                            </div>
+                        </div>
+
+                        <div className="p-6 space-y-6">
+                            {/* Usual Dose */}
+                            <div>
+                                <h4 className="font-bold text-slate-800 dark:text-slate-100 mb-2 flex items-center gap-2">
+                                    <Info size={18} className="text-emerald-600" />
+                                    Usual Dose
+                                </h4>
+                                <p className="text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-700/50 p-3 rounded-lg">
+                                    {selectedAntibiotic.usualDose}
+                                </p>
+                            </div>
+
+                            {/* Renal Dosing Table */}
+                            <div>
+                                <h4 className="font-bold text-slate-800 dark:text-slate-100 mb-3 flex items-center gap-2">
+                                    <Activity size={18} className="text-emerald-600" />
+                                    Renal Dosing Adjustments
+                                </h4>
+                                <div className="overflow-x-auto">
+                                    <table className="w-full text-sm">
+                                        <thead className="bg-slate-100 dark:bg-slate-700/50">
+                                            <tr>
+                                                <th className="px-4 py-2 text-left font-bold text-slate-700 dark:text-slate-300">CrCl (ml/min)</th>
+                                                <th className="px-4 py-2 text-left font-bold text-slate-700 dark:text-slate-300">Dosage Adjustment</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="divide-y divide-slate-200 dark:divide-slate-700">
+                                            {selectedAntibiotic.renalDosing.map((dosing, idx) => (
+                                                <tr key={idx} className="hover:bg-slate-50 dark:hover:bg-slate-700/30">
+                                                    <td className="px-4 py-3 font-medium text-slate-700 dark:text-slate-300">{dosing.crcl}</td>
+                                                    <td className="px-4 py-3 text-slate-600 dark:text-slate-400">{dosing.adjustment}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            {/* Notes */}
+                            {selectedAntibiotic.notes && (
+                                <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
+                                    <div className="flex items-start gap-2">
+                                        <AlertTriangle size={18} className="text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+                                        <div>
+                                            <h5 className="font-bold text-amber-800 dark:text-amber-400 text-sm mb-1">Important Notes</h5>
+                                            <p className="text-xs text-amber-700 dark:text-amber-300">{selectedAntibiotic.notes}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
@@ -1284,6 +1445,15 @@ export default function FormularyApp() {
                             </div>
 
                             <button
+                                onClick={() => setAppMode('abx')}
+                                className="hidden md:flex items-center gap-1.5 px-3 py-1.5 bg-amber-50 dark:bg-amber-900/20 hover:bg-amber-100 dark:hover:bg-amber-900/40 border border-amber-200 dark:border-amber-800 rounded-full transition-all group"
+                                title="Renal Dosing"
+                            >
+                                <Activity size={14} className="text-amber-600 dark:text-amber-400 group-hover:scale-110 transition-transform" />
+                                <span className="text-xs font-bold text-amber-700 dark:text-amber-300">Renal Dosing</span>
+                            </button>
+
+                            <button
                                 onClick={() => setDarkMode(!darkMode)}
                                 className="p-2 rounded-full bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
                                 aria-label="Toggle dark mode"
@@ -1316,6 +1486,16 @@ export default function FormularyApp() {
                                     <Heart size={18} fill={view === 'favorites' ? "currentColor" : "none"} />
                                 </button>
                             </div>
+                            {/* Mobile Quick Links */}
+                            <div className="md:hidden mt-3 flex gap-2 overflow-x-auto pb-1 no-scrollbar">
+                                <button
+                                    onClick={() => setAppMode('abx')}
+                                    className="flex items-center gap-1.5 px-3 py-1.5 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-full flex-shrink-0"
+                                >
+                                    <Activity size={13} className="text-amber-600 dark:text-amber-400" />
+                                    <span className="text-xs font-bold text-amber-700 dark:text-amber-300">Renal Dosing</span>
+                                </button>
+                            </div>
                         </div>
                     )}
                 </div>
@@ -1325,6 +1505,8 @@ export default function FormularyApp() {
             <div className="pb-20">
                 {appMode === 'nag' ? (
                     <NAGView />
+                ) : appMode === 'abx' ? (
+                    <ABXRegimeView />
                 ) : appMode === 'dilution' ? (
                     <DilutionView />
                 ) : appMode === 'paediatric' ? (
@@ -1498,6 +1680,7 @@ export default function FormularyApp() {
                                     value={selectedDrug.renalDose}
                                     warning={true}
                                 />
+
                                 <DetailRow
                                     icon={Baby}
                                     label="Pregnancy Category"
@@ -1546,6 +1729,13 @@ export default function FormularyApp() {
                         <span className="text-[10px] font-medium">NAG</span>
                     </button>
                     <button
+                        onClick={() => setAppMode('abx')}
+                        className={`flex flex-col items-center justify-center w-full h-full space-y-1 ${appMode === 'abx' ? 'text-emerald-600 dark:text-emerald-400' : 'text-slate-400 dark:text-slate-500'}`}
+                    >
+                        <Activity size={20} />
+                        <span className="text-[10px] font-medium">ABX</span>
+                    </button>
+                    <button
                         onClick={() => setAppMode('dilution')}
                         className={`flex flex-col items-center justify-center w-full h-full space-y-1 ${appMode === 'dilution' ? 'text-amber-600 dark:text-amber-400' : 'text-slate-400 dark:text-slate-500'}`}
                     >
@@ -1583,7 +1773,7 @@ export default function FormularyApp() {
                         For additions or to report issues, please contact <span className="font-semibold text-slate-600 dark:text-slate-300">Syahidah</span>
                     </p>
                     <p className="text-xs text-slate-400 dark:text-slate-500 uppercase tracking-widest font-semibold">
-                        AUTHORIZED PERSONNEL ONLY. FOR THE USE OF HOSPITAL SERI MANJUNG STAF ONLY
+                        AUTHORIZED PERSONNEL ONLY. FOR THE USE OF HOSPITAL SERI MANJUNG STAFF ONLY
                     </p>
                 </div>
             </footer>
