@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hsm-formulary-v1';
+const CACHE_NAME = 'hsm-formulary-v2';
 const urlsToCache = [
     '/',
     '/index.html',

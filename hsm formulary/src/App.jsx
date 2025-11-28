@@ -41,7 +41,8 @@ import {
     HeartHandshake,
     Dna,
     Siren,
-    Users
+    Users,
+    Camera
 } from 'lucide-react';
 
 // --- FORMULARY DATA ---
@@ -1056,27 +1057,27 @@ const FrankShannView = () => {
 
 // --- MAIN PAEDIATRIC VIEW WRAPPER ---
 const PaediatricView = () => {
-    const [activeTab, setActiveTab] = useState('protocol');
+    const [activeTab, setActiveTab] = useState('frankshann');
 
     return (
         <div className="max-w-4xl mx-auto px-4 py-6 space-y-6 md:space-y-8">
             <div className="flex p-1 bg-slate-100 dark:bg-slate-800 rounded-xl mb-6">
-                <button
-                    onClick={() => setActiveTab('protocol')}
-                    className={`flex-1 py-2.5 text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-2 ${activeTab === 'protocol' ? 'bg-white dark:bg-slate-700 shadow-sm text-purple-600 dark:text-purple-400' : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300'}`}
-                >
-                    <Baby size={16} /> Paediatric Protocol
-                </button>
                 <button
                     onClick={() => setActiveTab('frankshann')}
                     className={`flex-1 py-2.5 text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-2 ${activeTab === 'frankshann' ? 'bg-white dark:bg-slate-700 shadow-sm text-pink-600 dark:text-pink-400' : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300'}`}
                 >
                     <Stethoscope size={16} /> Frank Shann
                 </button>
+                <button
+                    onClick={() => setActiveTab('protocol')}
+                    className={`flex-1 py-2.5 text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-2 ${activeTab === 'protocol' ? 'bg-white dark:bg-slate-700 shadow-sm text-purple-600 dark:text-purple-400' : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300'}`}
+                >
+                    <Baby size={16} /> Paediatric Protocol
+                </button>
             </div>
 
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-300">
-                {activeTab === 'protocol' ? <PaediatricProtocolView /> : <FrankShannView />}
+                {activeTab === 'frankshann' ? <FrankShannView /> : <PaediatricProtocolView />}
             </div>
         </div>
     );
@@ -1336,16 +1337,13 @@ export default function FormularyApp() {
     const formularyData = FORMULARY_DATA;
 
     // Load dark mode preference
+    // Listen for system dark mode preference changes
     useEffect(() => {
-        const savedTheme = localStorage.getItem('formulary_theme');
-        if (savedTheme === 'dark') {
-            setDarkMode(true);
-        } else if (savedTheme === 'light') {
-            setDarkMode(false);
-        } else {
-            // Default to system preference
-            setDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
-        }
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        const handleChange = (e) => setDarkMode(e.matches);
+
+        mediaQuery.addEventListener('change', handleChange);
+        return () => mediaQuery.removeEventListener('change', handleChange);
     }, []);
 
     // Apply dark mode class to document
@@ -1355,7 +1353,6 @@ export default function FormularyApp() {
         } else {
             document.documentElement.classList.remove('dark');
         }
-        localStorage.setItem('formulary_theme', darkMode ? 'dark' : 'light');
     }, [darkMode]);
 
     // Load favorites
@@ -1434,32 +1431,19 @@ export default function FormularyApp() {
                                 <p className="text-[10px] md:text-xs text-slate-500 dark:text-slate-400 font-semibold mt-0.5 tracking-wide uppercase">
                                     Official Formulary & Guidelines
                                 </p>
+                                <p className="text-[10px] text-teal-600 dark:text-teal-400 font-bold mt-0.5">
+                                    Updated: 2 October 2025
+                                </p>
                             </div>
                         </div>
 
                         {/* Tools & Dark Mode */}
                         <div className="flex items-center gap-2">
-                            <div className="hidden md:flex items-center px-2 py-0.5 bg-rose-50 dark:bg-rose-900/20 border border-rose-100 dark:border-rose-800 rounded-full">
-                                <span className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse mr-1.5"></span>
-                                <span className="text-[9px] font-bold text-rose-600 dark:text-rose-400 uppercase tracking-wider">Internal Use</span>
+                            <div className="hidden md:flex items-center px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full">
+                                <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Authorized Personnel Only</span>
                             </div>
 
-                            <button
-                                onClick={() => setAppMode('abx')}
-                                className="hidden md:flex items-center gap-1.5 px-3 py-1.5 bg-amber-50 dark:bg-amber-900/20 hover:bg-amber-100 dark:hover:bg-amber-900/40 border border-amber-200 dark:border-amber-800 rounded-full transition-all group"
-                                title="Renal Dosing"
-                            >
-                                <Activity size={14} className="text-amber-600 dark:text-amber-400 group-hover:scale-110 transition-transform" />
-                                <span className="text-xs font-bold text-amber-700 dark:text-amber-300">Renal Dosing</span>
-                            </button>
 
-                            <button
-                                onClick={() => setDarkMode(!darkMode)}
-                                className="p-2 rounded-full bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
-                                aria-label="Toggle dark mode"
-                            >
-                                {darkMode ? <Sun size={18} className="text-amber-400" /> : <Moon size={18} className="text-slate-600" />}
-                            </button>
                         </div>
                     </div>
 
@@ -1515,6 +1499,9 @@ export default function FormularyApp() {
                     <CounselingView />
                 ) : (
                     <div className="max-w-4xl mx-auto px-4 py-4 md:py-6">
+                        {/* Renal Dosing Card */}
+
+
                         {/* Results Count */}
                         {formularyData.length > 0 && (
                             <div className="flex items-center justify-between mb-4 px-2">
@@ -1713,49 +1700,50 @@ export default function FormularyApp() {
 
             {/* Bottom Navigation (Visible on all screens) */}
             <div className="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 z-40 pb-safe">
-                <div className="max-w-4xl mx-auto flex justify-around items-center h-16">
+                <div className="max-w-4xl mx-auto flex justify-between md:justify-around items-center h-16 overflow-x-auto no-scrollbar px-2">
                     <button
                         onClick={() => setAppMode('formulary')}
-                        className={`flex flex-col items-center justify-center w-full h-full space-y-1 ${appMode === 'formulary' ? 'text-teal-600 dark:text-teal-400' : 'text-slate-400 dark:text-slate-500'}`}
+                        className={`flex flex-col items-center justify-center min-w-[64px] h-full space-y-1 ${appMode === 'formulary' ? 'text-teal-600 dark:text-teal-400' : 'text-slate-400 dark:text-slate-500'}`}
                     >
                         <Search size={20} />
                         <span className="text-[10px] font-medium">Formulary</span>
                     </button>
                     <button
                         onClick={() => setAppMode('nag')}
-                        className={`flex flex-col items-center justify-center w-full h-full space-y-1 ${appMode === 'nag' ? 'text-blue-600 dark:text-blue-400' : 'text-slate-400 dark:text-slate-500'}`}
+                        className={`flex flex-col items-center justify-center min-w-[64px] h-full space-y-1 ${appMode === 'nag' ? 'text-blue-600 dark:text-blue-400' : 'text-slate-400 dark:text-slate-500'}`}
                     >
                         <Shield size={20} />
                         <span className="text-[10px] font-medium">NAG</span>
                     </button>
                     <button
                         onClick={() => setAppMode('abx')}
-                        className={`flex flex-col items-center justify-center w-full h-full space-y-1 ${appMode === 'abx' ? 'text-emerald-600 dark:text-emerald-400' : 'text-slate-400 dark:text-slate-500'}`}
+                        className={`flex flex-col items-center justify-center min-w-[64px] h-full space-y-1 ${appMode === 'abx' ? 'text-emerald-600 dark:text-emerald-400' : 'text-slate-400 dark:text-slate-500'}`}
                     >
                         <Activity size={20} />
-                        <span className="text-[10px] font-medium">ABX</span>
+                        <span className="text-[10px] font-medium">Renal</span>
                     </button>
                     <button
                         onClick={() => setAppMode('dilution')}
-                        className={`flex flex-col items-center justify-center w-full h-full space-y-1 ${appMode === 'dilution' ? 'text-amber-600 dark:text-amber-400' : 'text-slate-400 dark:text-slate-500'}`}
+                        className={`flex flex-col items-center justify-center min-w-[64px] h-full space-y-1 ${appMode === 'dilution' ? 'text-amber-600 dark:text-amber-400' : 'text-slate-400 dark:text-slate-500'}`}
                     >
                         <Beaker size={20} />
                         <span className="text-[10px] font-medium">Dilution</span>
                     </button>
                     <button
                         onClick={() => setAppMode('paediatric')}
-                        className={`flex flex-col items-center justify-center w-full h-full space-y-1 ${appMode === 'paediatric' ? 'text-purple-600 dark:text-purple-400' : 'text-slate-400 dark:text-slate-500'}`}
+                        className={`flex flex-col items-center justify-center min-w-[64px] h-full space-y-1 ${appMode === 'paediatric' ? 'text-purple-600 dark:text-purple-400' : 'text-slate-400 dark:text-slate-500'}`}
                     >
                         <Baby size={20} />
                         <span className="text-[10px] font-medium">Paeds</span>
                     </button>
                     <button
                         onClick={() => setAppMode('counseling')}
-                        className={`flex flex-col items-center justify-center w-full h-full space-y-1 ${appMode === 'counseling' ? 'text-emerald-600 dark:text-emerald-400' : 'text-slate-400 dark:text-slate-500'}`}
+                        className={`flex flex-col items-center justify-center min-w-[64px] h-full space-y-1 ${appMode === 'counseling' ? 'text-emerald-600 dark:text-emerald-400' : 'text-slate-400 dark:text-slate-500'}`}
                     >
                         <MessageSquare size={20} />
                         <span className="text-[10px] font-medium">Counsel</span>
                     </button>
+
                 </div>
             </div>
 

@@ -1,0 +1,482 @@
+{
+  "metadata": {
+    "title": "ABX Regime HSM 2017",
+    "description": "Antibiotic Dosage in Adult Patients with Impaired Renal Function",
+    "source": "Hospital Seri Manjung",
+    "year": 2017,
+    "totalEntries": 18
+  },
+  "antibiotics": [
+    {
+      "id": "amikacin-md",
+      "name": "Amikacin (Multiple Daily Doses)",
+      "route": "IV",
+      "usualDose": "7.5 mg/kg BD",
+      "renalDosing": [
+        {
+          "crcl": ">50-90",
+          "adjustment": "7.5mg/kg q12h"
+        },
+        {
+          "crcl": "30-50",
+          "adjustment": "7.5mg/kg q24h"
+        },
+        {
+          "crcl": "10-30",
+          "adjustment": "7.5mg/kg q48h"
+        },
+        {
+          "crcl": "<10",
+          "adjustment": "7.5mg/kg q72h"
+        }
+      ],
+      "notes": "Administer post HD on HD day",
+      "category": "Aminoglycoside",
+      "matchKeywords": [
+        "amikacin"
+      ]
+    },
+    {
+      "id": "amikacin-od",
+      "name": "Amikacin (Once Daily)",
+      "route": "IV",
+      "usualDose": "15mg/kg OD",
+      "renalDosing": [
+        {
+          "crcl": ">80",
+          "adjustment": "15mg/kg q24h"
+        },
+        {
+          "crcl": "60-80",
+          "adjustment": "12mg/kg q24h"
+        },
+        {
+          "crcl": "40-60",
+          "adjustment": "7.5mg/kg q24h"
+        },
+        {
+          "crcl": "30-40",
+          "adjustment": "4mg/kg q24h"
+        },
+        {
+          "crcl": "20-30",
+          "adjustment": "7.5mg/kg q48h"
+        },
+        {
+          "crcl": "10-20",
+          "adjustment": "4mg/kg q48h"
+        },
+        {
+          "crcl": "<10",
+          "adjustment": "3mg/kg q72h"
+        }
+      ],
+      "notes": "Administer post HD on HD day",
+      "category": "Aminoglycoside",
+      "matchKeywords": [
+        "amikacin"
+      ]
+    },
+    {
+      "id": "ampicillin",
+      "name": "Ampicillin",
+      "route": "IV",
+      "usualDose": "500mg-2g q6h",
+      "renalDosing": [
+        {
+          "crcl": ">50",
+          "adjustment": "q6h"
+        },
+        {
+          "crcl": "10-50",
+          "adjustment": "q6-12h"
+        },
+        {
+          "crcl": "<10",
+          "adjustment": "q12-24h"
+        }
+      ],
+      "notes": "Administer post HD on HD day",
+      "category": "Penicillin",
+      "matchKeywords": [
+        "ampicillin"
+      ]
+    },
+    {
+      "id": "augmentin",
+      "name": "Augmentin (Amoxycillin 1g/Clavulanate 200mg)",
+      "route": "IV",
+      "usualDose": "1.2g TDS",
+      "renalDosing": [
+        {
+          "crcl": "10-50",
+          "adjustment": "1.2g BD"
+        },
+        {
+          "crcl": "<10",
+          "adjustment": "1.2g OD"
+        }
+      ],
+      "notes": "",
+      "category": "Penicillin + Beta-lactamase Inhibitor",
+      "matchKeywords": [
+        "augmentin",
+        "amoxycillin",
+        "clavulanate"
+      ]
+    },
+    {
+      "id": "azithromycin",
+      "name": "Azithromycin",
+      "route": "IV",
+      "usualDose": "500mg OD",
+      "renalDosing": [
+        {
+          "crcl": "All",
+          "adjustment": "No adjustment recommended"
+        }
+      ],
+      "notes": "Use with caution if GFR <10 ml/min",
+      "category": "Macrolide",
+      "matchKeywords": [
+        "azithromycin"
+      ]
+    },
+    {
+      "id": "bactrim",
+      "name": "Bactrim (Sulfamethoxazole/Trimethoprim)",
+      "route": "IV",
+      "usualDose": "8-20mg/kg/day (Trimethoprim) in divided doses",
+      "renalDosing": [
+        {
+          "crcl": ">30",
+          "adjustment": "No adjustment"
+        },
+        {
+          "crcl": "15-30",
+          "adjustment": "½ of recommended dose (BD for PCP)"
+        },
+        {
+          "crcl": "<15",
+          "adjustment": "Not recommended. If used: 5-10mg/kg OD post HD"
+        }
+      ],
+      "notes": "Administer after HD",
+      "category": "Sulfonamide",
+      "matchKeywords": [
+        "bactrim",
+        "sulfamethoxazole",
+        "trimethoprim",
+        "cotrimoxazole",
+        "co-trimoxazole"
+      ]
+    },
+    {
+      "id": "cefazolin",
+      "name": "Cefazolin",
+      "route": "IV",
+      "usualDose": "1-2g TDS",
+      "renalDosing": [
+        {
+          "crcl": "35-54",
+          "adjustment": "Full dose TDS"
+        },
+        {
+          "crcl": "11-34",
+          "adjustment": "½ usual dose BD"
+        },
+        {
+          "crcl": "<10",
+          "adjustment": "½ usual dose OD"
+        }
+      ],
+      "notes": "Administer post HD on HD day",
+      "category": "Cephalosporin (1st gen)",
+      "matchKeywords": [
+        "cefazolin"
+      ]
+    },
+    {
+      "id": "cefepime",
+      "name": "Cefepime",
+      "route": "IV",
+      "usualDose": "1-2g BD/TDS",
+      "renalDosing": [
+        {
+          "crcl": ">60",
+          "adjustment": "500mg BD to 2g TDS (based on severity)"
+        },
+        {
+          "crcl": "30-60",
+          "adjustment": "500mg OD to 2g BD"
+        },
+        {
+          "crcl": "11-29",
+          "adjustment": "250mg-500mg OD to 2g OD"
+        },
+        {
+          "crcl": "<11",
+          "adjustment": "250mg OD to 1g OD"
+        }
+      ],
+      "notes": "Administer post HD on HD day",
+      "category": "Cephalosporin (4th gen)",
+      "matchKeywords": [
+        "cefepime"
+      ]
+    },
+    {
+      "id": "ceftazidime",
+      "name": "Ceftazidime",
+      "route": "IV",
+      "usualDose": "1-2g BD/TDS",
+      "renalDosing": [
+        {
+          "crcl": "31-50",
+          "adjustment": "1g q12h"
+        },
+        {
+          "crcl": "16-30",
+          "adjustment": "1g q24h"
+        },
+        {
+          "crcl": "6-15",
+          "adjustment": "0.5g q24h"
+        },
+        {
+          "crcl": "≤5",
+          "adjustment": "0.5g q48h"
+        }
+      ],
+      "notes": "Administer post HD on HD day. May increase by 50% in severe infection",
+      "category": "Cephalosporin (3rd gen)",
+      "matchKeywords": [
+        "ceftazidime"
+      ]
+    },
+    {
+      "id": "ceftriaxone",
+      "name": "Ceftriaxone",
+      "route": "IV",
+      "usualDose": "1-2g OD",
+      "renalDosing": [
+        {
+          "crcl": "All",
+          "adjustment": "No adjustment necessary"
+        }
+      ],
+      "notes": "Max ≤2g/day if concurrent renal and hepatic dysfunction",
+      "category": "Cephalosporin (3rd gen)",
+      "matchKeywords": [
+        "ceftriaxone"
+      ]
+    },
+    {
+      "id": "ciprofloxacin-iv",
+      "name": "Ciprofloxacin",
+      "route": "IV",
+      "usualDose": "200-400mg BD",
+      "renalDosing": [
+        {
+          "crcl": "≥50",
+          "adjustment": "No adjustment"
+        },
+        {
+          "crcl": "10-50",
+          "adjustment": "200mg BD"
+        },
+        {
+          "crcl": "<10",
+          "adjustment": "200mg BD"
+        }
+      ],
+      "notes": "Administer post HD on HD day",
+      "category": "Fluoroquinolone",
+      "matchKeywords": [
+        "ciprofloxacin"
+      ]
+    },
+    {
+      "id": "ciprofloxacin-oral",
+      "name": "Ciprofloxacin",
+      "route": "Oral",
+      "usualDose": "250-750mg BD",
+      "renalDosing": [
+        {
+          "crcl": "30-50",
+          "adjustment": "250-500mg BD"
+        },
+        {
+          "crcl": "5-29",
+          "adjustment": "250-500mg OD"
+        },
+        {
+          "crcl": "HD",
+          "adjustment": "250-500mg OD post HD"
+        }
+      ],
+      "notes": "",
+      "category": "Fluoroquinolone",
+      "matchKeywords": [
+        "ciprofloxacin"
+      ]
+    },
+    {
+      "id": "meropenem",
+      "name": "Meropenem",
+      "route": "IV",
+      "usualDose": "500mg-2g TDS",
+      "renalDosing": [
+        {
+          "crcl": "26-50",
+          "adjustment": "Recommended dose BD"
+        },
+        {
+          "crcl": "10-25",
+          "adjustment": "½ recommended dose BD"
+        },
+        {
+          "crcl": "<10",
+          "adjustment": "½ recommended dose OD"
+        }
+      ],
+      "notes": "Administer after HD on HD day (500mg OD post HD)",
+      "category": "Carbapenem",
+      "matchKeywords": [
+        "meropenem"
+      ]
+    },
+    {
+      "id": "vancomycin",
+      "name": "Vancomycin",
+      "route": "IV",
+      "usualDose": "2-3g/day in 2-4 divided doses (Max: 4g/day)",
+      "renalDosing": [
+        {
+          "crcl": ">50",
+          "adjustment": "15-20mg/kg BD/TDS"
+        },
+        {
+          "crcl": "20-49",
+          "adjustment": "15-20mg/kg OD"
+        },
+        {
+          "crcl": "<20",
+          "adjustment": "TDM-guided after 1g stat"
+        }
+      ],
+      "notes": "Dose based on therapeutic drug monitoring",
+      "category": "Glycopeptide",
+      "matchKeywords": [
+        "vancomycin"
+      ]
+    },
+    {
+      "id": "gentamicin-md",
+      "name": "Gentamicin (Multiple Daily)",
+      "route": "IV",
+      "usualDose": "1.7mg/kg TDS",
+      "renalDosing": [
+        {
+          "crcl": ">50-90",
+          "adjustment": "1.7mg/kg TDS"
+        },
+        {
+          "crcl": "10-50",
+          "adjustment": "1.7mg/kg q12-48h"
+        },
+        {
+          "crcl": "<10",
+          "adjustment": "1.7mg/kg q48-72h"
+        }
+      ],
+      "notes": "Administer post HD on HD day. Further adjust based on TDM",
+      "category": "Aminoglycoside",
+      "matchKeywords": [
+        "gentamicin"
+      ]
+    },
+    {
+      "id": "gentamicin-od",
+      "name": "Gentamicin (Once Daily)",
+      "route": "IV",
+      "usualDose": "3-5mg/kg OD",
+      "renalDosing": [
+        {
+          "crcl": ">80",
+          "adjustment": "5mg/kg q24h"
+        },
+        {
+          "crcl": "60-80",
+          "adjustment": "4mg/kg q24h"
+        },
+        {
+          "crcl": "40-60",
+          "adjustment": "3.5mg/kg q24h"
+        },
+        {
+          "crcl": "30-40",
+          "adjustment": "2.5mg/kg q24h"
+        },
+        {
+          "crcl": "20-30",
+          "adjustment": "4mg/kg q48h"
+        },
+        {
+          "crcl": "10-20",
+          "adjustment": "3mg/kg q48h"
+        },
+        {
+          "crcl": "<10",
+          "adjustment": "2mg/kg q72h"
+        }
+      ],
+      "notes": "Administer post HD on HD day. Further adjust based on TDM",
+      "category": "Aminoglycoside",
+      "matchKeywords": [
+        "gentamicin"
+      ]
+    },
+    {
+      "id": "metronidazole",
+      "name": "Metronidazole (Flagyl)",
+      "route": "IV",
+      "usualDose": "500mg TDS",
+      "renalDosing": [
+        {
+          "crcl": "All",
+          "adjustment": "No adjustment necessary"
+        }
+      ],
+      "notes": "",
+      "category": "Nitroimidazole",
+      "matchKeywords": [
+        "metronidazole",
+        "flagyl"
+      ]
+    },
+    {
+      "id": "tazocin",
+      "name": "Tazocin (Piperacillin 4g/Tazobactam 0.5g)",
+      "route": "IV",
+      "usualDose": "4.5g TDS-QID (Max: 18g/day)",
+      "renalDosing": [
+        {
+          "crcl": "20-40",
+          "adjustment": "2.25g QID"
+        },
+        {
+          "crcl": "<20",
+          "adjustment": "2.25g TDS or QID for nosocomial pneumonia"
+        }
+      ],
+      "notes": "Administer post HD on HD day",
+      "category": "Penicillin + Beta-lactamase Inhibitor",
+      "matchKeywords": [
+        "tazocin",
+        "piperacillin",
+        "tazobactam"
+      ]
+    }
+  ]
+}

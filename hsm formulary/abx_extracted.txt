@@ -1,0 +1,881 @@
+
+=== PAGE 1 ===
+Antibiotic Dosage in Adult Patients with Impaired Renal Function  
+Antibiotic  Usual dose  Dosage adjustment in renal impairment  
+IV Amikacin  
+(Multiple daily 
+doses)  7.5 mg/kg BD   
+CrCl (ml/min)  Dosage adjustment  
+        >50-90 7.5mg/kg q12h  
+30-50 7.5mg/kg q24h  
+10-30 7.5mg/kg q48h  
+<10 7.5mg/kg q72h  
+IV Amikacin  
+(Once daily dose)  15mg/kg OD  
+ 
+*Administer post HD on HD day  
+(Source: The Sanford Guide to Antimicrobial Therapy 2013)  CrCl (ml/min)  Dosage adjustment  
+>80 15mg/kg q24h  
+60-80 12mg/kg q24h  
+40-60 7.5mg/kg q24h  
+30-40 4mg/kg q24h  
+20-30 7.5mg/kg q48h  
+10-20 4mg/kg q48h  
+<10 3mg/kg q72h  
+IV Ampicillin  500mg -2g every 
+6 hours  CrCl > 50ml/min: Administer every 6 hours  
+CrCl 10 -50ml/min: Administer 6 -12 hours  
+CrCl <  10ml/min: Administer every 12 -24 hours  
+*Administer post HD on HD day.  
+(Source: Nat ional Antibiotic Guideline 2014/Sanford)  
+ 
+IV Augmentin  
+(Amoxycillin 
+1g/Clavulanate 200mg)  1.2g TDS  CrCl 10 -50 ml/min: 1.2g BD  
+CrCl <10 ml/min: 1.2g OD  
+(Source: Guide to Antimicrobial Therapy in the Adult ICU 2012)  
+ 
+IV Azithromycin  500mg OD  No dosage adjustment is recommended  
+Use with caution if GFR <10 ml/min  
+(Source: Product Leaflet (Azee Inj®) & Drug Info Handbook 22nd Ed) 
+ 
+IV Bactrim  
+(Sulphamethoxaz ole 
+400mg/Trimethoprim 
+80mg)  Trimethoprim 
+component      
+8-20 mg /kg/day 
+in divided doses 
+every 6, 8 or 12 
+hours  
+(BD/TDS/QID)  CrCl: >30ml/min: No dosage adjustment  
+CrCl 15 -30 ml/min: Administer ½  of recommended dose  
+                                  *For P CP infection , administer in 2 divided doses  
+CrCl <15 ml/min: N ot recommended. If used, 5 -10mg/kg OD,        
+                               administer after HD  
+(Source: Drug Info 22nd Ed & Sanford Guide to Antimicrobial Therapy 2013)  
+ 
+IV Cefazolin  
+ 
+ 
+ 
+ 
+ 
+ 
+ 1-2g TDS  
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+*Administer post HD on HD day  
+(Source: Drug Info Handbook 22nd Ed) 
+ CrCl (ml/min)  Dose  Frequency  
+35-54 Full dose  TDS 
+11-34 ½  usual dose  BD 
+<10 ½  usual dose  OD 
+
+=== PAGE 2 ===
+Antibiotic  Usual Dosage  Dosage Adjustment in Renal Impairment  
+IV Cefepime  1-2g BD/TDS   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+*Administer post HD on HD day  
+(Source: Product Leaflet (Forpar ®)    
+ CrCl Recommended maintenance schedule  
+>60 
+(Normal 
+dose)  500mg BD  1g BD  2g BD  2g TDS  
+30-60 500mg OD  1g OD  2g OD  2g BD  
+11-29 500mg OD  500mg OD  1g OD  2g OD  
+<11 250mg OD  250mg OD  500mg OD  1g OD  
+CAPD  500mg 
+Q48H  1g Q48H  2g Q48H  2g Q48H  
+HD 1g on D1, then 0.5g OD  1g OD  
+IV Cefoperazone  1-2g BD   CrCl <18ml/min: Maximum dosage 4 g/day  
+(Source: Product leaflet Bicafar ®) 
+ 
+IV Cefotaxime  
+ 
+ 1-2g TDS  
+ 
+ 
+ 
+ 
+ GFR 10 -50 ml/min: Administer BD/TDS/ QID 
+GFR <10 ml/min: Administer OD or reduce dose by 50% & administer 
+at usual intervals  
+*Administer post HD on HD day  (Usual HD dose: 1 -2g OD)  
+Concurrent Renal (CrCl < 5ml/min) & Hepatic impairment: 500mg BD  
+(Source: Dru g Info Handbook 22nd Ed) 
+IV Ceftazidime  1-2g BD/TDS   
+CrCl (ml/min)  Dosage Adjustment  
+31-50 1g 12 hrly  
+16-30 1g 24hrly  
+6-15 0.5g 24hrly  
+≤5 0.5g 48hrly  
+*Administer post HD on HD day  
+**The unit dose above may be increased by 50% in severe infection . 
+Usual dose in HD : 1g OD (Administer post HD on HD day)  
+(Source: Product Leaflet (Fortum ®) 
+ 
+IV Ceftriaxone  1-2g OD  No dosage adjustment necessary  
+*Concurrent renal and hepatic dysfunction - Max dose: ≤2g/day  
+(Source: Product Leaflet (Unocef ®) & Drug Info Handbook 22nd Ed) 
+IV Cefuroxime  750mg -1.5g TDS   
+ 
+ 
+ 
+   
+*Administer post HD  on HD day  
+(The Sanford Guide to Antimicrobial Therapy 2013 ) 
+ 
+ 
+ 
+ 
+ 
+ CrCl (ml/min)  Frequency  
+>50 TDS 
+10-50 BD-TDS 
+<10 OD 
+
+=== PAGE 3 ===
+Antibiotic  Usual Dose  Dosage Adjustment in Renal Impairment  
+IV Ciprofloxacin  Oral:  
+250-750mg BD  
+ 
+ 
+ 
+ 
+IV  
+200-400mg BD  
+ Oral  
+CrCl 30 -50ml/min: 250 -500mg BD  
+CrCl 5 -29ml/min: 250 -500mg every 18hr (To give OD for ease of 
+administration)  
+HD: 250 -500mg OD *Administer Post HD on HD day  
+(Source: Drug info Handbook 22nd Ed & Micromedex)  
+IV 
+CrCl ≥50ml/min: no dosage adjustment  
+CrCl 10 -50ml/min: 200mg BD  
+CrCl <10ml/min: 200mg BD  
+*Administer Post HD on HD day  
+(Source : Drug info Handbook 22nd Ed) 
+ 
+Oral Clindamycin  300mg TDS -QID 
+(Max: 1800mg/day)  No dosage adjustment required.  
+Poorly dialyzable.  
+(Source: Drug Info Handbook 22nd Ed) 
+ 
+IV Cloxacillin  500mg -2g QID  No dosage adjustment necessary  
+(Source: Drug Info Handbook 22nd Ed) 
+IV Ertapenem  1g OD  CrCl ≤30 ml/min & ESRF (HD): 500mg OD  
+*Give after HD or at least 6 hrs prior to HD.  
+*If dose given within 6 hrs prior to HD, a supplementary dose of 
+150mg is recommended following HD  
+(Source: Product Leaflet (Invanz ®) & Drug Info Handbook 22nd Ed) 
+ 
+Oral Fusidic acid  500mg TDS  No dosage adjustment required  
+(Source: Drug Info Ha ndbook 18th Ed) 
+ 
+IV Gentamicin  
+(Multiple daily doses)  
+ 1.7mg/kg TDS  
+ 
+ 
+ 
+*Administer post HD on HD day  
+ CrCl (ml/min)  Dosage adjustment  
+>50-90 1.7mg/kg TDS  
+10-50 1.7mg/kg q12 -48h 
+<10 1.7mg/kg q48 -72h 
+ 
+IV Gentamicin  
+(Single daily dose)  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+3-5mg/kg OD  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+*Administer post HD on HD day  
+(Source: The Sanford Guide to Antimicrobial Therapy 2013)  
+Further dosage adjustment should be based on TDM result  
+ 
+ CrCl (ml/min)  Dosage adjustment  
+>80 5mg/kg q24h  
+60-80 4mg/kg q24h  
+40-60 3.5mg/kg q24h  
+30-40 2.5mg/kg q24h  
+20-30 4mg/kg q48h  
+10-20 3mg/kg q48h  
+<10 2mg/kg q72h  
+
+=== PAGE 4 ===
+ 
+Antibiotic   
+Usual Dose   
+ 
+Dosage Adjustment in Renal Impairment  
+IV Imipenem  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 0.5g -1g TDS-
+QID 
+ 
+Max: 4g/day  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ (Source: Drug Info Handbook 22nd Ed) 
+CrCl 
+(ml/min/1.73m2) Body Weight (Kg)  
+≥70 60 50 40 30 
+Total daily dose for normal renal function: 1g/day (250mg QID)  
+CrCl ≥ 71  250mg 
+q6h 250mg 
+q8h 125mg 
+q6h 125mg 
+q6h 125mg 
+q8h 
+CrCl 41-70 250mg 
+q8h 125mg 
+q6h 125mg 
+q6h 125mg 
+q8h 125mg 
+q8h 
+CrCl 21 -40 250mg 
+q12h  250mg 
+q12h  125mg 
+q8h 125mg 
+q12h  125mg 
+q12h  
+CrCl 6 -20 250mg 
+q12h  125mg 
+q12h  125mg 
+q12h  125mg 
+q12h  125mg 
+q12h  
+Total daily dose for normal renal function: 1 .5g/day  (500mg TDS)  
+CrCl ≥ 71  500mg 
+q8h 250mg 
+q6h 250mg 
+q6h 250mg 
+q8h 125mg 
+q6h 
+CrCl 41 -70 250mg 
+q6h 250mg 
+q8h 250mg 
+q8h 125mg
+q6h 125mg 
+q8h 
+CrCl 21 -40 250mg 
+q8h 250mg 
+q8h 250mg 
+q12h  125mg 
+q8h 125mg 
+q8h 
+CrCl 6 -20 250mg 
+q12h  250mg 
+q12h  250mg 
+q12h  125mg 
+q12h  125mg 
+q12h  
+Total  daily d ose for normal renal function: 2 g/day  (500mg QID)  
+CrCl ≥ 71  500mg 
+q6h 500mg 
+q8h 250mg 
+q6h 250mg 
+q6h 250mg 
+q8h 
+CrCl 41 -70 500mg 
+q8h 250mg 
+q6h 250mg 
+q6h 250mg 
+q8h 125mg 
+q6h 
+CrCl 21 -40 250mg 
+q6h 250mg 
+q8h 250mg 
+q8h 250mg 
+q12h  125mg 
+q8h 
+CrCl 6 -20 250mg 
+q12h  250mg 
+q12h  250mg 
+q12h  250mg 
+q12h  125mg 
+q12h  
+Total daily d ose for normal renal function: 3 g/day  (1g TDS)  
+CrCl ≥ 71  1g q8h  750mg 
+q8h 500mg 
+q6h 500mg 
+q8h 250mg 
+q6h 
+CrCl 41 -70 500mg 
+q6h 500mg 
+q8h 500mg 
+q8h 250mg 
+q6h 250mg 
+q8h 
+CrCl 21 -40 500mg 
+q8h 500mg 
+q8h 250mg 
+q6h 250mg 
+q8h 250mg 
+q8h 
+CrCl 6 -20 500mg 
+q12h  500mg 
+q12h  250mg 
+q12h  250mg 
+q12h  250mg 
+q12h  
+Total daily d ose for normal renal function: 4 g/day  (1g QID)  
+CrCl ≥ 71  1g q6h  1g q8h  750mg 
+q8h 500mg 
+q6h 500mg 
+q8h 
+CrCl 41 -70 750mg 
+q8h 750mg 
+q8h 500mg 
+q6h 500mg 
+q8h 250mg 
+q6h 
+CrCl 21 -40 500mg 
+q6h 500mg 
+q8h 500mg 
+q8h 250mg 
+q6h 250mg 
+q8h 
+CrCl 6 -20 500mg 
+q12h  500mg 
+q12h  500mg 
+q12h  250mg 
+q12h  250mg 
+q12h  
+      
+ 
+
+=== PAGE 5 ===
+Antibiotic  Usual Dose  Dosage Adjustment in Renal Impairment  
+IV Linezolid  600mg BD  No dosage adjustment is required, but should be given after HD        
+on HD day  
+(Source: Drug Info Handbook 22nd Ed) 
+IV Meropenem  500mg -2g TDS  CrCl 26 -50 ml/min: recommended dose BD  
+CrCl 10 -25 ml/min: ½  recommended dose BD  
+CrCl < 10 ml/min: ½  recommended dose OD  
+*Administer after HD on HD day (Usual HD dose: 500mg OD post HD)  
+(Source: Product Leaflet (DBL Meropenem for Inj ®) & Drug Info 22nd Ed) 
+ 
+IV Metronidazole  
+(Flagyl ®) 500mg TDS  No dosage adjustment is necessary  
+(Source: Drug  Info Handbook 22nd Ed) 
+Penicillin G  
+(Benzylpenicillin)  0.5-4 million 
+unit every 4 to 6 
+hours  
+(1MU = 600mg)  CrCl > 50ml/min: No dosage adjustment  
+CrCl 10 -50 ml/min: Administer 75% of normal dose  
+CrCl < 10ml/min: Administer 25 -50% of normal dose  
+*Administer post HD on HD day  
+(Source: National Antibiotic Guideline 2014)  
+IV Polymyxin E  
+(Colistimethate 
+Sodium)  
+ 
+**Treatment  of 
+Multidrug Resistant 
+Acinetobacter sp . 
+Please consult 
+Specialist before 
+starting this drug   ≤60kg  
+50000 -75000 
+unit/kg/day in 3 
+divided doses  
+Max:  6MU/day  
+ 
+ 
+>60kg  
+1-2MU TDS  
+ 
+Source: KKM 
+Formulary  (Blue 
+Book)  ≤ 60kg  
+Source: Micromedex (in terms of colistin base):  
+CrCl 50 -79 ml/min: 2.5 -3.8 mg/kg/day in 2 divided doses  
+CrCl 30 -49 ml/min: 2.5 mg/kg/day OD or in 2 divided doses  
+CrCl 10-29 ml/min: 1.5 mg/kg/day every 36 hrs  
+*1mg co listin base = 2.4 mg colistimethate sodium = 30000  Unit colistimethate sodium  
+ 
+>60kg  
+Source: KKM formulary  (in terms of MU Colistimethate Sodium) : 
+CrCl 20 -50ml/min: 1 -2MU TDS  
+CrCl 10 -20ml/min: 1MU q12 -18H 
+CrCl < 10ml/min: 1MU q18 -24H 
+ 
+ICU 
+Source: Guide to Antimicrobial Therapy in the Adult ICU 2012          
+(In terms of MU Colistimethate Sodium ) 
+Body Weight  
+(kg) CrCl (ml/min)  
+>50 20-50 <20 HD 
+>60 3MU q8h  3MU q12h  3MU q24h  3MU q24h  
+50-60 2MU q8h  2MU q12h  2MU q24h  2MU q24h  
+40-49 1.5MU q8h  1.5MU q12h  1.5MU q24h  1.5MU q24h  
+30-39 1 MU q8h  1 MU q12h  1 MU q24h  1 MU q24h  
+MU: Million Units.  
+*Administer post HD on HD day  
+High dose 
+Sulbactam  in 
+Unasyn ® or 
+Sulperazon ® 
+**(Treatment of 
+Multidrug Resistant 
+Microorganism)  
+Please consult 
+specialist before 
+starting this dosage)  8g/day 
+Sulbactam in 
+divided doses  IV Sulperazon ®: (Cefoperazone 0.5g/Sulbactam 0.5g)  
+IV Unasyn ®: (Ampicillin 1g/Sulbactam 0.5g)  
+ 
+CrCl (ml/min)  Sulbactam Dose (g/day)  
+>50 8 
+20-50 6 
+<20 4 
+CRRT/ HD 4 
+(Source: Guide to Antimicrobial Therapy in the Adult ICU 2012 )           
+
+=== PAGE 6 ===
+Antibiotic  Usual Dose  Dosage Adjustment in Renal Impairment  
+IV Sulperazon ® 
+(Cefoperazone 
+0.5g/Sulbactam 0.5g)  1-2g BD  CrCl 15-30 ml/min: 1g BD (max 2 g/day)  
+CrCl <15 ml/min: 500mg BD (max 1 g/day)  
+*Administer post HD on HD day  
+(Source: Drug Info Handbook 22nd Ed)  
+ 
+IV Tazocin ® 
+(Piperacillin 4g/ 
+Tazobactam 0.5g)  4.5g TDS -QID 
+(Max: 18g/day)  
+ CrCl 20 -40 ml/min: 2.25g QID  
+CrCl <20 ml/min: 2.25g TDS or 2.25g QID for nosocomial pneumonia  
+*Administer post HD on HD day  
+(Source: Drug Info Handbook 22nd Ed) 
+IV Unasyn ® 
+(Ampicillin 1g/Sulbactam 
+0.5g)  1.5 - 3g TDS -QID CrCl 15 -29 ml/min: 1.5g -3g BD  
+CrCl 5 -14 ml/min: 1.5g -3g OD  
+*Administer post HD on HD day  
+** Drug dosing should be done using Cockcroft -Gault formula  
+(Source: Product Leaflet (Sulbacin ®) & Drug Info Handbook 22nd Ed)  
+ 
+IV Vancomycin  2-3 g/day in 2 -4 
+divided doses  
+Max: 4g/day  
+ CrCl > 50 ml/min: 15 -20 mg/kg/dose (BD/ TDS)  
+CrCl 20 -49 ml/min: 15 -20 mg/kg/dose (OD)  
+CrCl <20 ml/min: Interval determined by TDM after stat dose of 1g  
+(Source: Drug Info Handbook 22nd Ed & National Antibiotic Guideline 2014 ) 
+ 
+Cockcroft -Gault formula  for calculation of Creatinine Clearance : 
+ 
+Female : CrCl  (ml/min)  =    [(140 -Age) x Weight (kg) x 1.04]     
+                                                       Creatinine (μmol/L)  
+ 
+Male : CrCl (ml/min)     =    [(140 -Age) x Weight (kg) x 1.23 ]    
+                                                       Creatinine (μmol/L)  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PAGE 7 ===
+Antifungal Dosage in Adult Patients with Impaired Renal Function  
+Antifungal  Usual dose  Dosage adjustment in renal impairment  
+IV Amphotericin B  
+ 
+ 
+ 0.3-1.5mg/kg 
+once daily  
+ 
+ -No dose adjustment needed  
+-If renal dysfunction is due to Amphotericin B, daily total dose can 
+be decreased by 50% or the dose can be given every other day.  
+-Poorly dialyzable , No supplemental dose required post HD  
+(Source: Drug Info Handbook 22nd Ed) 
+ 
+IV/Oral 
+Fluconazole  IV & Oral  
+100-800mg OD  No adjustment in single dose therapy  
+For patient who receives multiple doses of Fluconazole, an initial 
+loading dose of 50 -400mg should be given. After the LD, the daily 
+dose should be based on following table:  
+Renal function estimated using Cockcroft -Gault formula  
+CrCl (ml/min)  % of Recommen ded dose  
+>50 100%  
+<50 (No dialysis)  50%  
+Regular dialysis  100%, Administer post HD on HD day  
+On Non HD day, administer 50% of 
+recommended dose  
+(Source: Drug Info Handbook 2nd Ed & Product leaflet: Diflucan ®) 
+ 
+Oral Itraconazole  100mg OD or 
+200mg OD -BD 
+ 
+Doses > 200mg 
+daily should be 
+administered  in 2 
+divided doses  
+ No dosage adjustment needed. Use with caution in renal impaired 
+patient.  
+(Source: Drug Info Handbook 22nd Ed) 
+ 
+ 
+Oral 
+Ketoconazole  200-400mg OD  No dosage adjustment recommended  
+(Source: Sanf ord Guide to Antimicrobial Therapy 2013)  
+ 
+Oral Terbinafine  250mg OD  No dosage adjustment recommended.  
+CrCl < 50ml/min: Clearance decreased by 50%. Use is not 
+recommended  
+(Source: Drug Info Handbook 22nd Ed)  
+ 
+Cockcroft -Gault formula for calculation of  Creatinine Clearance:  
+ 
+Female : CrCl (ml/min)  =    [(140 -Age) x Weight (kg) x 1.04]     
+                                                       Creatinine (μmol/L)  
+ 
+Male : CrCl (ml/min)     =    [(140 -Age) x Weight (kg) x 1.23]     
+                                                       Creatinine (μmol/L)  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PAGE 8 ===
+Antiviral  Dosage in Adult Patients with Impaired Renal Function  
+Antiviral  Usual Dose  Dose Adjustment in Renal Impairment  
+IV Acyclovir  IV 
+5-10mg/kg/dose 
+TDS 
+ 
+(Dose for Obese 
+Patien t should be 
+calculated using 
+IBW)   
+CrCl 
+(ml/min)  Dosage adjustment  
+25-50 Recommended dose every 12 hrs  
+10-25 Recommended dose every 24  hrs 
+<10 50% of recommended dose every 24 hrs  
+*Administer post HD on HD day  
+Source: Drug Info Handbook 2nd Ed & Product leaflet: Zovirax ®  
+ 
+Oral Acyclovir  Oral  
+200mg -800mg 
+4x/day  or 
+5x/day   
+CrCl 
+(ml/min)  Dosage adjustment  
+      10-25 For normal dosing regimen of 800mg 5 times daily:  
+Administer 800mg TDS  
+<10 For normal dosing regimen of 200mg 5 times daily  
+or 400mg BD : Administer 200mg BD  
+<10 For normal dosing regimen of 800mg 5 times daily: 
+Administer 800mg BD  
+Source: Drug Info Handbook 22nd Ed 
+ 
+Oral 
+Lamivudine 
+150mg  HIV  
+150mg BD  or 
+300mg OD  
+ 
+ (HIV)  (Pt >16 years old)  
+CrCl > 50ml/min: No dosage adjustment required  
+CrCl 30-49ml/min: 150mg OD  
+CrCl 15 -29ml/min: 150mg first dose, then 100mg OD  
+CrCl 5 -14ml/min: 150mg first dose, then 50mg OD  
+CrCl <5ml/min: 50mg first dose, then 25mg OD  
+ 
+Oral 
+Lamivudine 
+100mg  Hepatitis B  
+100mg OD  Hepatitis   
+CrCl >  50ml/min: No dosage adjustment required  
+CrCl 30 -49ml/min: 100mg first dose, then 50mg OD  
+CrCl 15 -29ml/min: 100mg first dose, then 25mg OD  
+CrCl 5 -14ml/min : 35mg first dose, then 15mg OD  
+CrCl <5ml/min : 35mg first dose, then 10mg OD  
+ 
+-Dialysis: Negligible amounts are removed during dialysis. 
+Supplemental dosing is not required.  However, dosing after HD is 
+recommended.  
+(Source: Drug Info Handbook 22nd Ed) 
+ 
+Oral Tenofovir  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ HIV/Hepatitis B  
+300mg OD  
+ 
+ 
+ 
+ 
+ 
+ 
+ CrCl ≥ 50ml/min: No adjustment necessary  
+CrCl 30 -49ml/min: 300mg every 48 hrs  
+CrCl 10 -29ml/min: 300mg every 72 -96 hrs  
+CrCl < 10ml/min (Without HD): No recommendation available  
+CrCl < 10ml/min (HD): 300mg every 7 days , Administer post HD  
+(Source: Drug Info Handbook 22nd Ed) 
+ 
+ 
+ 
+
+=== PAGE 9 ===
+Antiviral  Usual Dosage  Dosage Adjustment in Renal Impairment  
+Oral Tenofovir 
+300mg/   
+Emtricitabine 
+200mg  1 tab OD  CrCl > 50ml/min: No dosage adjustment required  
+CrCl 30 -50ml/min: 1 tab every 48 hr  
+CrCl < 30ml/min: Do not use  
+(Source: Sanford Guide to Antimicrobial Therapy 2013)  
+Zidovudine  Oral  
+300mg BD  
+ Oral  
+≥15ml/min: No need dose adjustment  
+<15ml/min: 100mg TDS /300mg OD   
+*Administer post HD on HD day  
+(Source: Drug Info Handbook 22nd Ed) 
+Zidovudine  IV  
+1-2mg/kg every 
+4 hours  IV 
+≥15ml/min:  No dosage adjustment needed  
+<15ml/min: 1mg/kg every 6 to 8 hours  
+*Administer post HD on HD day  
+(Source: Drug Info Handbook 22nd Ed & Product leaflet IV Retrovir ®) 
+ 
+ 
+List of Antiretrovirals Which Do Not Require Dosage Adjustment In Renal Impairment  
+ Abacavir  
+ Efavirenz  
+ Indinavir  
+ Lopinavir  
+ Lopinavir/Ritonavir (Kaletra)  
+ Nevirapine  
+ 
+Cockcroft -Gault formula for calculation of Creatinine Clearance:  
+ 
+Female : CrCl (ml/min)  =    [(140 -Age) x Weight (kg) x 1.04]     
+                                                       Creatinine (μmol /L)  
+ 
+Male : CrCl (ml/min)     =    [(140 -Age) x Weight (kg) x 1.23]     
+                                                       Creatinine (μmol/L)  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PAGE 10 ===
+ 
+Table 1: Dosage of Daily Anti -TB Treatment  
+Body 
+Weight  Daily 
+Isoniazid 
+(5mg/kg)  Daily 
+Rifampicin 
+(10mg/kg)  Daily IM 
+Streptomycin 
+(15mg/kg)  Daily 
+Ethambutol 
+(20mg/kg -
+25mg/kg)  Daily 
+Pyrazinamide 
+(25mg/kg)  
+25Kg  150 mg  300 mg  0.4 g  600 mg  750 mg  
+30Kg  150 mg 300 mg  0.45 g  800 mg  750 mg  
+35Kg  200 mg  300 mg  0.55 g  800 mg  1000 mg  
+40Kg  200 mg  450 mg  0.6 g  800 mg  1000 mg  
+45Kg  250 mg  450 mg  0.7 g  1000 mg  1000 mg  
+50Kg  250 mg  450 mg  0.75 g  1000 mg  1250 mg  
+55Kg  300 mg  600 mg  0.85 g  1200 mg  1250 mg  
+60Kg  300 mg  600 mg  0.9 g  1200 mg  1500 mg  
+65Kg  300 mg  600 mg  1g 1200 mg  1500 mg  
+70Kg  300 mg  600 mg  1g 1200 mg  1500 mg  
+≥75Kg  Max: 300 mg  Max: 600 mg  Max:1g  Max: 1200 mg  Max: 1500 mg  
+(Source: Respiratory Clinic HRPB, Ipoh)  
+ IM Streptomycin: Dose is lower at 10mg/kg  for elderly aged above 60 years  and do 
+not exceed 750mg  
+Dosage Adjustment for  CrCl < 30ml/min:  
+1. No dosage adjustment for Isoniazid and Rifampicin.  
+2. For Pyrazinamide and Ethambutol, to administer normal dose 
+according to body weight (Refer Table 1) on alternate day .  
+3. IM Streptomycin is contraindicated in renal failure  
+4. On the day of hemodialysis, medications should be administered 
+after hemodialysis  
+ 
+ 
+ 
+ 
+ 
+
+=== PAGE 11 ===
+Fixed Dose Combination Dosing for Anti TB  
+Drug  Body Weight  Dose  
+Akurit -4 30-37kg  2 tablets daily  
+ 38-54kg  3 tablets daily  
+ 55-70kg  4 tablets daily  
+ >70kg  4 tablets daily  
+ 
+1 tablet Akurit -4 contains :                                                                         
+Rifampicin 150mg/Isoniazid  75mg/ Pyrazinamide 400mg/Ethambutol 275mg   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Prepared by:     Reviewed by,     Approved by,  
+Ms Ling Siew Hong & Ms Angie Chuah   Pn Normi bt Hamdan     Dr Lee Li yuan,  
+Clinical Pharmacy Unit, Pharmacy Dept   Clinical Pharmacy Unit, Pharmacy Dept   Ketua Jabatan Medical Dept  
+Hospital Seri Manjung, Perak    Hospital Seri Manjung    Hospital Seri Manjung  
+ 
+     (Date Prepared: Jan 2017)  
+ 
+  
