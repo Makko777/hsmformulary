@@ -1,0 +1,9 @@
+Date,Time,Task/Event,Description,Priority,Status,Category,Notes
+2024-01-15,09:00,Morning Meeting,Team standup meeting,High,In Progress,Work,Discuss project progress
+2024-01-15,14:00,Project Deadline,Submit final report,High,Pending,Work,Need to review before submitting
+2024-01-16,10:30,Client Call,Discuss requirements,Medium,Pending,Work,Prepare presentation
+2024-01-16,16:00,Exercise,Gym session,Low,Pending,Personal,
+2024-01-17,09:00,Workshop,Learning session,Medium,Pending,Personal,Take notes
+2024-01-18,11:00,Lunch Meeting,Business lunch,Medium,Pending,Work,
+2024-01-19,15:00,Review Tasks,Weekly review,High,Pending,Work,Update progress
+

@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(composer create-project:*)",
+      "Bash(mv:*)",
+      "Bash(rm:*)",
+      "Bash(php artisan:*)",
+      "Bash(composer require:*)",
+      "Bash(mysql:*)",
+      "Bash(ip route:*)",
+      "Bash(echo:*)",
+      "Bash(cat:*)",
+      "Bash(php -r:*)",
+      "Bash(printenv:*)",
+      "Bash(unset:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

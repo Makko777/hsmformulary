@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Important metadata here-->
+    <meta name="description" content="Web Permohonan Perkhidmatan Nilai Tambah Farmasi Hospital Seri Manjung">
+    <meta content="FPLhsm.moh.my" property="og:title"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Farmasi Pesakit Luar Hospital Seri Manjung</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <!--To connect the website font and icon-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="icon" href="favicon.ico"/>
+</head>
+
+<body>
+    <!--Headings, paragraphs, image, etc goes inside here-->
+<h1>Farmasi Pesakit Luar Hospital Seri Manjung</h1>
+    <h2>Ini adalah web permohonan perkhidmatan Nilai Tambah Farmasi Pesakit Luar Hospital Seri Manjung</h2>
+    <h3>Senarai Perkhidmatan Nilai Tambah (VAS) yang ditawarkan</h3>
+    <!--ul stands for unordered list-->
+        <ul>
+            <li>Farmasi Pandu Lalu (pengambilan ubat di Drive Thru - waktu operasi 9 pagi-12.30 petang)</li>
+            <li>Farmasi Park & Take (pengambilan ubat di Kaunter 6 & 7 di Farmasi Pesakit Luar)</li>
+        </ul>
+        <form action="/submit-date" method="POST">
+        <section>
+        <h3>Sila masukkkan nama penuh anda di sini<br><input type="text" placeholder="Nama" required></input></h3>
+        <h3>Sila masukkan nombor kad pengenalan/passport anda<br><input type="text" placeholder="No kad pengenalan" required></input></h3>
+        <h3>Sila masukkan MRN anda di sini (boleh abaikan jika tidak pasti)<br></h3>
+            <p>No MRN bermula dengan HSM0000xxxx. (Seperti yang tertera di stiker label nama anda)</p><input type="number" placeholder="MRN"></input></p>
+        <h3>Sila masukkan nombor telefon anda yang mempunyai aplikasi WhatsApp<br><input type="tel" pattern="[0-9]{10,11}" placeholder="No telefon" title="Nombor sahaja" required></input></h3>
+        </section>
+        <section><h3>Sila pilih perkhidmatan yang anda inginkan</h3>
+        <select>
+            <option>Sila pilih</option>
+            <option>Farmasi Pandu Lalu</option>
+            <option>Farmasi Park & Take</option>
+        </select>
+        <p></p>
+        <h3>Sila pilih tarikh pengutipan ubat anda<label for="date_selection"></label></h3>
+        <input type="date" id="date_selection" name="date_selection"></input>
+        <br>
+        </section>
+        <input type="checkbox" disabled>Sila pastikan anda setuju dengan <a href=":link to the terma dan syarat" target="_blank">terma dan syarat</a> yang ditetapkan</input>
+        <br>
+        <button class="btn" id="submit">Hantar Permohonan</button>
+    </form>
+</body>
+</html>
+
+<!--figure element represents self-contained content and allow you to associate an image with caption, by using figcaption element.
+perlu nested kan image tersebut dalam figure element baru boleh add figcaption element dalam tu untuk letak caption kat image tersebut-->
+
+<!--em element emphasize the word, by making it italic-->
+<!--strong element bold the word-->
+<!--ol stands for ordered list-->
+<!--footer contain author info, copyright data, links to term and condition, contact info etc-->
+<!--div is used as container to group other elements that will share the same css style. but do not overuse it. can also use section to divide the content-->
+<!--id attributes adds unique identifier to HTML element.must not have space-->
+<!--class can have space-->
+<!--&lt;p&gt;learning is fun&lt;/p&gt; is known as named character ref
+named reference start with ampersand sign & and end with semicolon;. by using this HTML will not confuse this with actual HTML element-->
+<!--for number it start with ampersand & and hash #, followed by one or more decimal digits, followed by semicolon-->

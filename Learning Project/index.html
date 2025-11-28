@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--HEAD CONTAINING ALL THE INFO ABOUT THE PAGE -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Cda-Learning-Coding-Project">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="favicon.png">
+        <script src="script.js"></script>
+        <title>Cda's Learning Coding Project</title>
+    </head>
+    <!--BODY IS FOR THINGS PEOPLE CAN SEE-->
+    <body>
+        <!--HEADER IS TOP PART OF WEBPAGE, CONTAINING NAVIGATION MENU-->
+        <header>
+            <h1>Cda's Learning Coding Project</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#html">HTML</a></li>
+                        <li><a href="#css">CSS</a></li>
+                        <li><a href="#javascript">JavaScript</a></li>
+                    </ul>
+                </nav>
+        </header>
+        <!--SECTION BIG GROUP CONTENT THAT HAS TOPIC SOMETHING LIKE CHAPTER-->
+        <section id="html">
+            <!--ARTICLE IS INDEPENDENT CONTENT THAT CAN STAND ALONE-->
+            <h2>HTML (Hypertext Markup Language)</h2>
+                <article>
+                    <h3>What is HTML?</h3>
+                    <p>HTML stands for HyperText Markup Language<br>Think of HTML like the structure or skeleton of a webpage</p>
+                    <!--FIGURE IS FOR MEDIA-IMAGE, DIAGRAM, CHARTS ETC-->
+                    <figure>
+                        <img src="https://i.ibb.co/9X6pj1t/Web-App-Icon-Planner-Cuti-FPL-HSM.png" alt="Web-App-Icon-Planner-Cuti-FPL-HSM">
+                    <figcaption>Planner Cuti FPL HSM</figcaption>
+                </figure>
+                </article>
+                <article>
+                    <h3>HTML usage</h3>
+                    <article>HTML is widely use in webpage development</article>
+                </article>
+        </section>
+        <section id="css">
+            <h2>CSS (Cascading Style Sheets)</h2>
+            <article>
+                <h3>What is CSS?</h3>
+                <p>CSS is a stylesheet language used to describe the presentation and styling of a document written in markup language, primarily HTML.<br>
+                    It controls how elements on a webpage are being displayed.</p>
+            </article>
+        </section>
+        <section id="javascript">
+            <h2>JavaScript?</h2>
+            <article>
+                <h3>What is JavaScript?</h3>
+                <p>JavaScript is high-level, interpreted programming language primarily known for enabling interactive and dynamic contenct on websites.</p>
+            </article>
+            <video width="500" height="300" src="https://www.youtube.com/watch?v=zofMnllkVfI&t=24s" controls autoplay muted loop poster></video>
+        </section>
+        <!--FORM-->
+        <!--for and id need to be the same-->
+        <!--label and input is needed. can nest them together or define them by putting for and id-->
+        <h2>Survey Form</h2>
+        <form method="GET" action="http://googlesheet.com">
+            <label for="name">Your Full Name:</label>
+            <input id="name" type="text" placeholder="Please put your name here" required/>
+            <label for="date">Date of Birth:</label>
+            <input id="date" type="date" required/>
+            <label for="email">Email Address</label>
+            <input id="email" type="email" placeholder="Your Email" minlength="4" required/>
+            
+            <button type="reset">Reset Form</button>
+            <button type="submit">Submit</button>
+            <input class="start-btn" type="button" value="Start Game"/>
+            <script src="index.js"></script>
+        </form>
+    </body>
+</html>
